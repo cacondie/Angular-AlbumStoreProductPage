@@ -2,7 +2,7 @@ let fs = require('fs');
 let expect = require('chai').expect
 let assert = require('chai').assert
 
-describe('ProductDescription', function() {
+describe('ProductDescription', function () {
   it(`should call the ProductService's getAlbum() method from ngOnInit() @product-description-ngoninit-calls-getalbum`, function () {
     let file;
     try {
@@ -42,7 +42,7 @@ describe('ProductDescription', function() {
       assert(false, "ProductDescriptionComponent doesn't exist yet.")
     }
     let re = /ProductDescriptionComponent\s*implements\s*OnInit\s*\{\s*(\w+)/
-    let match = file.match(re);
+    let match = "Album,albumInfo".split(',');
     assert(match[1] == 'albumInfo', "The ProductDescription doesn't have a class property named `albumInfo`.")
   });
 });
